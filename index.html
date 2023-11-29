@@ -6,107 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eloisa's Portfolio</title>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Your custom CSS -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <img src="images/loho.png" width="50px" height="50px">
-        </div>
-        <nav>
-            <a href="#">home</a>
-            <a href="#">about</a>
-            <a href="#">works</a>
-            <a href="#">contact</a>
-
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" width="50px" height="50px" alt="Eloisa's Portfolio">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
         <section class="intro">
-            <div class="image-placeholder">
-                <img src="images/IMG_2708.jpg" alt="Eloisa" width="200px" height="300">
-            </div>
-            <div class="description">
-                <h1>Hi, I'm Eloisa</h1>
-                <p>a passionate and creative UX/UI designer with a curiosity for crafting exceptional digital
-                    experiences.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="images/IMG_2708.jpg" alt="Eloisa" class="img-fluid" width="200px" height="300">
+                    </div>
+                    <div class="col-md-6">
+                        <h1>Hi, I'm Eloisa</h1>
+                        <p>A passionate and creative UX/UI designer with a curiosity for crafting exceptional digital experiences.</p>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="works">
-            <h2>SOME OF MY WORKS</h2>
-            <div class="cards">
-                <div class="work-item">
-                    <div class="image-placeholder">
-                        <img src="images/roadsavvy.png" alt="roadsavvy" width="350px" height="300" id="hoverImage">
+            <div class="container">
+                <h2>SOME OF MY WORKS</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="images/roadsavvy.png" alt="roadsavvy" class="card-img-top" width="350px"
+                                height="300">
+                            <div class="card-body">
+                                <h3 class="card-title">roadsavvy</h3>
+                                <p class="card-text">Designing an app for individuals to assist in enhancing their fundamental car knowledge.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="work1">
-                        <h3>roadsavvy</h3>
-                        <p>Designing an app for individuals to assist in <br> enhancing their fundamental car knowledge.
-                        </p></br>
-                    </div>
-
-                </div>
-                <div class="work-item">
-                    <div class="image-placeholder">
-                        <img src="images/NTCR.png" alt="ntcr" width="350px" height="300">
-                    </div>
-                    <div class="works2">
-                        <h3>North Toronto Cat Rescue</h3>
-                        <p>Redesigning a non-profit website.</p>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="images/NTCR.png" alt="ntcr" class="card-img-top" width="350px" height="300">
+                            <div class="card-body">
+                                <h3 class="card-title">North Toronto Cat Rescue</h3>
+                                <p class="card-text">Redesigning a non-profit website.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <script>
-                const images = document.querySelectorAll('.work-item img');
-
-                images.forEach(image => {
-                    image.addEventListener('mouseover', function () {
-                        this.style.transform = 'scale(1.1)';
-                    });
-
-                    image.addEventListener('mouseout', function () {
-                        this.style.transform = 'scale(1)';
-                    });
-                });
-            </script>
         </section>
-        <!-- <section class="other">
-            <h3>Other than design</h3>
-            <div class="other-item">
-                <div class="image-placeholder"></div>
-                <p>Lorem ipsum dolor sit amet...</p>
-            </div>
-
-            <div class="other-item">
-                <div class="image-placeholder"></div>
-                <p>Lorem ipsum dolor sit amet...</p>
-            </div>
-
-
-            <div class="other-item">
-                <div class="image-placeholder"></div>
-                <p>Lorem ipsum dolor sit amet...</p>
-            </div>
-            <-- Repeat as necessary for other items -->
-        <!-- </section>  -->
     </main>
     <footer>
-
-            </div>
+        <div class="container">
             <h4>CONNECT WITH ME</h4>
             <div class="social-links">
-                <a href="https://www.instagram.com/deloisaaan" target="_blank">instagram</a>
-                <a href="https://www.behance.net/ellcan" target="_blank">behance</a>
+                <a href="https://www.instagram.com/deloisaaan" target="_blank">Instagram</a>
+                <a href="https://www.behance.net/ellcan" target="_blank">Behance</a>
                 <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
                 <!-- Add other social media links as needed -->
             </div>
         </div>
     </footer>
 
-    </footer>
-
-    </footer>
+    <!-- Bootstrap JS and jQuery (for Bootstrap functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
